@@ -57,6 +57,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def new_movement
+    @product = Product.find(params[:id])
+    @movement = Movement.new
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
